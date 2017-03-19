@@ -190,8 +190,135 @@ namespace uI
         private void button6_Click(object sender, EventArgs e)
         {
 
+            Console.WriteLine("A"+Area.A_time+"s+"+Area.A_tag);
+            Console.WriteLine("B" + Area.B_time + "s+" + Area.B_tag);
+            Console.WriteLine("C" + Area.C_time + "s+" + Area.C_tag);
+            Console.WriteLine("D" + Area.D_time + "s+" + Area.D_tag);
+        }
+
+        private void radioButton10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton9_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            /*
+             *设置区域的报警条件
+             *step1:
+             *检查所选定的是哪个区域
+             *
+             * step2:
+             * 检查所选定的是什么报警条件
+             * 
+             */
+            if(checkBox1.CheckState==CheckState.Checked){
+                
+                //区域A
+                
+                if (radioButton10.Checked==true) {
+                    Area.A_tag = 1;
+                }
+                else if (radioButton9.Checked == true) {
+
+                    Area.A_time = 60*int.Parse(textBox2.Text); 
+                }
+            }
+            /*
+             * 区域B
+             * */
+            else if (checkBox2.CheckState == CheckState.Checked)
+            {
+                
+                if (radioButton10.Checked == true)
+                {
+                    Area.B_tag = 1;
+                }
+                else if (radioButton9.Checked == true)
+                {
+
+                    Area.B_time = 60 * int.Parse(textBox2.Text);
+                }
+            }
+
+            /*
+             * 区域C
+             * 
+             */
+            else if (checkBox3.CheckState == CheckState.Checked)
+            {
           
-            Console.WriteLine(Status.p001);
+                if (radioButton10.Checked == true)
+                {
+                    Area.C_tag = 1;
+                }
+                else if (radioButton9.Checked == true)
+                {
+
+                    Area.C_time = 60 * int.Parse(textBox2.Text);
+                }
+            }
+
+                /*
+                 * 
+                 * //区域D
+                 */
+            else if (checkBox4.CheckState == CheckState.Checked)
+            {
+                
+                if (radioButton10.Checked == true)
+                {
+                    Area.D_tag = 1;
+                }
+                else if (radioButton9.Checked == true)
+                {
+
+                    Area.D_time = 60 * int.Parse(textBox2.Text);
+                }
+            }
+            else {
+                MessageBox.Show("未正确设置条件");
+            }
         }
     }
 }

@@ -52,19 +52,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.所属单位 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.人员编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.区域 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.报警信息 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -105,10 +95,7 @@
             this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -141,8 +128,6 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -150,10 +135,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.t从 = new System.Windows.Forms.TabControl();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.人员编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.区域 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.报警信息 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -175,13 +167,13 @@
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.t从.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -220,7 +212,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 28;
-            this.button6.Text = "button6";
+            this.button6.Text = "测试";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -406,13 +398,9 @@
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.panel1);
-            this.tabPage4.Controls.Add(this.textBox4);
             this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.textBox2);
             this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
@@ -446,61 +434,17 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.所属单位,
             this.人员编号,
             this.姓名,
             this.时间,
             this.区域,
             this.报警信息});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(732, 277);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // 所属单位
-            // 
-            this.所属单位.HeaderText = "所属单位";
-            this.所属单位.Name = "所属单位";
-            this.所属单位.Width = 120;
-            // 
-            // 人员编号
-            // 
-            this.人员编号.HeaderText = "人员编号";
-            this.人员编号.Name = "人员编号";
-            this.人员编号.Width = 120;
-            // 
-            // 姓名
-            // 
-            this.姓名.HeaderText = "姓名";
-            this.姓名.Name = "姓名";
-            this.姓名.Width = 120;
-            // 
-            // 时间
-            // 
-            this.时间.HeaderText = "时间";
-            this.时间.Name = "时间";
-            this.时间.Width = 120;
-            // 
-            // 区域
-            // 
-            this.区域.HeaderText = "区域";
-            this.区域.Name = "区域";
-            this.区域.Width = 120;
-            // 
-            // 报警信息
-            // 
-            this.报警信息.HeaderText = "报警信息";
-            this.报警信息.Name = "报警信息";
-            this.报警信息.Width = 120;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(423, 60);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 7;
             // 
             // textBox3
             // 
@@ -509,28 +453,12 @@
             this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 6;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(103, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 5;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(103, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(350, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "日期";
             // 
             // label3
             // 
@@ -540,15 +468,6 @@
             this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "人员姓名";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "设备编号";
             // 
             // label1
             // 
@@ -719,6 +638,7 @@
             this.button1.Text = "保存";
             this.button1.UseMnemonic = false;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabControl1
             // 
@@ -737,7 +657,6 @@
             this.tabPage5.Controls.Add(this.groupBox6);
             this.tabPage5.Controls.Add(this.button4);
             this.tabPage5.Controls.Add(this.button2);
-            this.tabPage5.Controls.Add(this.dataGridView2);
             this.tabPage5.Controls.Add(this.groupBox3);
             this.tabPage5.Location = new System.Drawing.Point(4, 26);
             this.tabPage5.Name = "tabPage5";
@@ -930,7 +849,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(202, 275);
+            this.button4.Location = new System.Drawing.Point(485, 290);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
@@ -940,61 +859,22 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(61, 275);
+            this.button2.Location = new System.Drawing.Point(283, 290);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "添加";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 62);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(327, 193);
-            this.dataGridView2.TabIndex = 1;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton6);
-            this.groupBox3.Controls.Add(this.radioButton11);
+            this.groupBox3.Controls.Add(this.dataGridView2);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(327, 50);
+            this.groupBox3.Size = new System.Drawing.Size(327, 263);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "人员选择";
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(219, 25);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(74, 20);
-            this.radioButton6.TabIndex = 1;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "按个人";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(66, 25);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(74, 20);
-            this.radioButton11.TabIndex = 2;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "按单位";
-            this.radioButton11.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
@@ -1035,7 +915,7 @@
             this.groupBox5.Controls.Add(this.radioButton1);
             this.groupBox5.Controls.Add(this.radioButton5);
             this.groupBox5.Controls.Add(this.radioButton12);
-            this.groupBox5.Location = new System.Drawing.Point(375, 30);
+            this.groupBox5.Location = new System.Drawing.Point(477, 30);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(343, 273);
             this.groupBox5.TabIndex = 20;
@@ -1265,6 +1145,7 @@
             this.checkBox3.TabIndex = 19;
             this.checkBox3.Text = "区域C";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -1275,6 +1156,7 @@
             this.checkBox4.TabIndex = 20;
             this.checkBox4.Text = "区域D";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -1285,6 +1167,7 @@
             this.checkBox2.TabIndex = 18;
             this.checkBox2.Text = "区域B";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -1295,42 +1178,20 @@
             this.checkBox1.TabIndex = 17;
             this.checkBox1.Text = "区域A";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton7);
-            this.groupBox2.Controls.Add(this.radioButton8);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.radioButton9);
             this.groupBox2.Controls.Add(this.radioButton10);
-            this.groupBox2.Location = new System.Drawing.Point(175, 30);
+            this.groupBox2.Location = new System.Drawing.Point(210, 30);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(145, 224);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "限定行为";
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 151);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(90, 20);
-            this.radioButton7.TabIndex = 15;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "人数满员";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 69);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(58, 20);
-            this.radioButton8.TabIndex = 13;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "离开";
-            this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // radioButton9
             // 
@@ -1342,6 +1203,7 @@
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "滞留超时";
             this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.CheckedChanged += new System.EventHandler(this.radioButton9_CheckedChanged);
             // 
             // radioButton10
             // 
@@ -1353,6 +1215,7 @@
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "进入";
             this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton10_CheckedChanged);
             // 
             // textBox6
             // 
@@ -1401,28 +1264,85 @@
             this.t从.TabIndex = 2;
             this.t从.Tag = "";
             // 
-            // Column4
+            // dataGridView2
             // 
-            this.Column4.HeaderText = "选择";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 65;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "姓名";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 65;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataGridView2.Location = new System.Drawing.Point(16, 37);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(284, 193);
+            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // Column2
             // 
             this.Column2.HeaderText = "编号";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 65;
+            this.Column2.Width = 80;
             // 
-            // Column1
+            // Column3
             // 
-            this.Column1.HeaderText = "所属单位";
-            this.Column1.Name = "Column1";
+            this.Column3.HeaderText = "姓名";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "选择";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // 人员编号
+            // 
+            this.人员编号.HeaderText = "人员编号";
+            this.人员编号.Name = "人员编号";
+            this.人员编号.Width = 120;
+            // 
+            // 姓名
+            // 
+            this.姓名.HeaderText = "姓名";
+            this.姓名.Name = "姓名";
+            this.姓名.Width = 120;
+            // 
+            // 时间
+            // 
+            this.时间.HeaderText = "时间";
+            this.时间.Name = "时间";
+            this.时间.Width = 120;
+            // 
+            // 区域
+            // 
+            this.区域.HeaderText = "区域";
+            this.区域.Name = "区域";
+            this.区域.Width = 120;
+            // 
+            // 报警信息
+            // 
+            this.报警信息.HeaderText = "报警信息";
+            this.报警信息.Name = "报警信息";
+            this.报警信息.Width = 120;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(6, 137);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(58, 26);
+            this.textBox2.TabIndex = 38;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(70, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "分钟";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
@@ -1459,9 +1379,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -1470,6 +1388,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.t从.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1498,13 +1417,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1530,10 +1445,7 @@
         private System.Windows.Forms.RadioButton radioButton26;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBox22;
@@ -1566,8 +1478,6 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.TextBox textBox6;
@@ -1585,22 +1495,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 所属单位;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 人员编号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 时间;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 区域;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 报警信息;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 人员编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 时间;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 区域;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 报警信息;
+        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
 
 
     }
