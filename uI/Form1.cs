@@ -12,6 +12,8 @@ namespace uI
 {
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
             InitializeComponent();
@@ -167,6 +169,7 @@ namespace uI
 
             Form2 form2 = new Form2(this);
             form2.Show();
+           
         }
 
         private void textBox24_TextChanged(object sender, EventArgs e)
@@ -182,6 +185,13 @@ namespace uI
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+          
+            Console.WriteLine(Status.p001);
         }
     }
 }
