@@ -1,0 +1,14 @@
+G:\大创-区域定位及报警系统\uI\uI\bin\Debug\uI.exe.config
+G:\大创-区域定位及报警系统\uI\uI\bin\Debug\uI.exe
+G:\大创-区域定位及报警系统\uI\uI\bin\Debug\uI.pdb
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.csprojResolveAssemblyReference.cache
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.Form1.resources
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.Properties.Resources.resources
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.csproj.GenerateResource.Cache
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.exe
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.pdb
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.Form2.resources
+G:\大创-区域定位及报警系统\uI\uI\bin\Debug\uI.exe.manifest
+G:\大创-区域定位及报警系统\uI\uI\bin\Debug\uI.application
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.exe.manifest
+G:\大创-区域定位及报警系统\uI\uI\obj\Debug\uI.application
