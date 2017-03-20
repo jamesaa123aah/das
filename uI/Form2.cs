@@ -87,16 +87,25 @@ namespace uI
 
           
             
-            Status.p001 = "001进入D区域";
-
-           
+          
+           //将当前活动填入历史轨迹中
             Status.p001_track.number = "p001";
             Status.p001_track.name = "张桦";
             Status.p001_track.time = tem;
             Status.p001_track.area = "进入D区域";
-            Status.p001_track.alarmingInfo = "非法闯入";
-            
+            Status.p001_track.alarmingInfo = "";
+            //判断D区域是否允许进入
+            if (Area.Area_D.tag == 1) {
+                Status.p001_track.alarmingInfo = "非法闯入D区域";
+                form1.richTextBox1.AppendText(Status.p001_track.name+" "+Status.p001_track.alarmingInfo+" "+tem+"\r\n");
+                form1.Update();
+            }
+          
+            //记录该人员的历史轨迹
             Status.p001_st.Push(Status.p001_track);
+
+
+
 
             button2.Enabled = false;
             button3.Enabled = true;
@@ -111,14 +120,22 @@ namespace uI
             int s = currentTime.Second;
             String tem = strY + ":" + s;
             
-            Status.p001 = "001离开D区域";
+         
 
             Status.p001_track.area = "离开D区域";
             Status.p001_track.number = "p001";
             Status.p001_track.name = "张桦";
+            Status.p001_track.alarmingInfo = "";
             Status.p001_track.time = tem;
-            Status.p001_track.alarmingInfo = "无";
+            //判断D区域是否允许离开
+            if (Area.Area_D.tag2 == 1)
+            {
+                Status.p001_track.alarmingInfo = "非法离开D区域";
+                form1.richTextBox1.AppendText(Status.p001_track.name + " " + Status.p001_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
 
+            //记录改人员的历史轨迹
             Status.p001_st.Push(Status.p001_track);
 
 
@@ -128,7 +145,7 @@ namespace uI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Status.p002 = "002进入D区域";
+           
 
             //获取当前时间
             System.DateTime currentTime = new System.DateTime();
@@ -143,7 +160,14 @@ namespace uI
             Status.p002_track.name = "李君蜂";
             Status.p002_track.time = tem;
             Status.p002_track.area = "进入D区域";
-            Status.p002_track.alarmingInfo = "非法闯入";
+            Status.p002_track.alarmingInfo = "";
+            //判断D区域是否允许进入
+            if (Area.Area_D.tag == 1)
+            {
+                Status.p002_track.alarmingInfo = "非法闯入D区域";
+                form1.richTextBox1.AppendText(Status.p002_track.name + " " + Status.p002_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
 
             Status.p002_st.Push(Status.p002_track);
             
@@ -154,7 +178,6 @@ namespace uI
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Status.p002 = "002离开D区域";
 
             //获取当前时间
             System.DateTime currentTime = new System.DateTime();
@@ -169,7 +192,14 @@ namespace uI
             Status.p002_track.name = "李君蜂";
             Status.p002_track.time = tem;
             Status.p002_track.area = "离开D区域";
-            Status.p002_track.alarmingInfo = "滞留超时";
+            Status.p002_track.alarmingInfo = "";
+            //判断D区域是否允许离开
+            if (Area.Area_D.tag2 == 1)
+            {
+                Status.p002_track.alarmingInfo = "非法离开D区域";
+                form1.richTextBox1.AppendText(Status.p002_track.name + " " + Status.p002_track.alarmingInfo + " " + tem+"\r\n");
+                form1.Update();
+            }
 
             Status.p002_st.Push(Status.p002_track);
             
@@ -180,14 +210,14 @@ namespace uI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Status.p003 = "003进入D区域";
+        
             button4.Enabled = false;
             button8.Enabled = true;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Status.p003 = "003离开D区域";
+          
             button8.Enabled = false;
             button4.Enabled = true;
         }

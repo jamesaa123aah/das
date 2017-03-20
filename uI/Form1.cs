@@ -262,6 +262,8 @@ namespace uI
             textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
             decimal tem = 293;
             textBox24.Text = (tem - (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value)).ToString();
+           
+            //
             richTextBox1.AppendText(DateTime.Now.ToString() + " D区域\r\n");
         }
 
@@ -291,76 +293,8 @@ namespace uI
 
         private void button6_Click(object sender, EventArgs e)
         {
-
-
-            //向DataGridView中填充数据
-            /*DataGridView dgv = new DataGridView();
-            dgv.Columns.Add("A", "B");
-
-
-            DataGridViewCellStyle style = new DataGridViewCellStyle();
-            style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            List<string> lsInfo = new List<string>();
-
-            lsInfo.Add("ljd");
-            lsInfo.Add("www");
-
-            if (lsInfo != null && lsInfo.Count > 0)    //lsInfo就是List<数据> 
-            {
-                dataGridView2.Rows.Add(lsInfo.Count);
-                //data.Rows.Add(lsInfo.Count);
-            }
-
-            for (int i = 0; i < lsInfo.Count; i++)
-            {
-                dataGridView2.Rows[i].Cells[0].Value = lsInfo[i];    //填充第一列的数据 
-                dataGridView2.Rows[i].Cells[1].Value = lsInfo[i];    //填充第二列的数据 
-
-            }*/
-
-            
-           
-
-
-            //向DataGridView中填充数据
-            DataGridView dgv = new DataGridView();
-            dgv.Columns.Add("A", "B");
-
-
-            DataGridViewCellStyle style = new DataGridViewCellStyle();
-            style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            List<string> lsInfo1 = new List<string>();
-            List<string> lsInfo2 = new List<string>();
-            List<string> lsInfo3 = new List<string>();
-            List<string> lsInfo4 = new List<string>();
-            List<string> lsInfo5 = new List<string>();
-
-            foreach (Status.Person_track c in Status.p001_st)
-            {
-                lsInfo1.Add(c.number);
-                lsInfo2.Add(c.name);
-                lsInfo3.Add(c.time);
-                lsInfo4.Add(c.area);
-                lsInfo5.Add(c.alarmingInfo);
-            }
-
-            if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
-            {
-                dataGridView1.Rows.Add(lsInfo1.Count);
-                //data.Rows.Add(lsInfo.Count);
-            }
-
-            for (int i = 0; i < lsInfo1.Count; i++)
-            {
-                dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
-                dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
-                dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
-                dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
-                dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i]; 
-            }
-
+            Console.WriteLine(Area.Area_A.tag2);
+            Console.WriteLine(Area.Area_B.tag);
 
         }
 
@@ -420,16 +354,43 @@ namespace uI
              * 检查所选定的是什么报警条件
              * 
              */
+
             if(checkBox1.CheckState==CheckState.Checked){
                 
                 //区域A
                 
                 if (radioButton10.Checked==true) {
-                    Area.A_tag = 1;
+                   
+                    
+                    Area.Area_A.tag = 1;
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "A区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止进入";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
                 else if (radioButton9.Checked == true) {
 
-                    Area.A_time = 60*int.Parse(textBox2.Text); 
+                    Area.Area_A.time = 60*int.Parse(textBox2.Text);
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "A区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止滞留超时";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                }
+                else if (radioButton6.Checked == true) {
+                    Area.Area_A.tag2 = 1;
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "A区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止离开";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
             }
             /*
@@ -440,12 +401,38 @@ namespace uI
                 
                 if (radioButton10.Checked == true)
                 {
-                    Area.B_tag = 1;
+                    Area.Area_B.tag = 1;
+
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "B区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止进入";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
                 else if (radioButton9.Checked == true)
                 {
 
-                    Area.B_time = 60 * int.Parse(textBox2.Text);
+                    Area.Area_B.time = 60 * int.Parse(textBox2.Text);
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "B区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止滞留超时";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                }
+                else if (radioButton6.Checked == true)
+                {
+                    Area.Area_B.tag2 = 1;
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "B区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止离开";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
             }
 
@@ -458,12 +445,37 @@ namespace uI
           
                 if (radioButton10.Checked == true)
                 {
-                    Area.C_tag = 1;
+                    Area.Area_C.tag = 1;
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "C区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止进入";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
                 else if (radioButton9.Checked == true)
                 {
 
-                    Area.C_time = 60 * int.Parse(textBox2.Text);
+                    Area.Area_C.time = 60 * int.Parse(textBox2.Text);
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "C区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止滞留超时";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                }
+                else if (radioButton6.Checked == true)
+                {
+                    Area.Area_C.tag2 = 1;
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "C区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止离开";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
             }
 
@@ -476,12 +488,37 @@ namespace uI
                 
                 if (radioButton10.Checked == true)
                 {
-                    Area.D_tag = 1;
+                    Area.Area_D.tag = 1;
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "D区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止进入";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
                 else if (radioButton9.Checked == true)
                 {
 
-                    Area.D_time = 60 * int.Parse(textBox2.Text);
+                    Area.Area_D.time = 60 * int.Parse(textBox2.Text);
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "D区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止滞留超时";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                }
+                else if (radioButton6.Checked == true)
+                {
+                    Area.Area_D.tag2 = 1;
+
+                    //将报警信息放入栈中，用于历史查询
+                    AlarmingInfo.tem.area = "D区域";
+                    AlarmingInfo.tem.name = textBox5.Text;
+                    AlarmingInfo.tem.type = "禁止离开";
+
+                    AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
                 }
             }
             else {
@@ -490,6 +527,55 @@ namespace uI
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton6_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //报警信息查询（按照区域查询）
+
+            //清空表中数据
+            dataGridView3.Rows.Clear(); 
+
+            List<string> lsInfo1 = new List<string>();
+            List<string> lsInfo2 = new List<string>();
+            List<string> lsInfo3 = new List<string>();
+            
+            foreach (AlarmingInfo.AlarmInfoArea c in AlarmingInfo.alarmInfo_area)
+            {
+                lsInfo1.Add(c.name);
+                lsInfo2.Add(c.area);
+                lsInfo3.Add(c.type);
+                
+            }
+
+            if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+            {
+                dataGridView3.Rows.Add(lsInfo1.Count);
+                //data.Rows.Add(lsInfo.Count);
+            }
+
+            for (int i = 0; i < lsInfo1.Count; i++)
+            {
+                dataGridView3.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                dataGridView3.Rows[i].Cells[1].Value = lsInfo2[i];
+                dataGridView3.Rows[i].Cells[2].Value = lsInfo3[i];
+            
+            }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
         {
 
         }

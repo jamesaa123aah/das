@@ -29,22 +29,12 @@ namespace uI
         public static Person_track p008_track;
         public static Person_track p009_track;
         public static Person_track p010_track;
-        /*
-         * 记录人员的状态：
-         * 002进入A:"p002In"
-         * 002离开A："p002Out"
-         */
 
-        
-        public static string p001_num = "";
-        public static string p001_name = "";
-        //权限 0 允许  1禁止
-        public static string[] p001_A_permit = {"0","0","0","0"};
+        public struct Person
+        {
+           public string location;
+        };
        
-  
-
-         
-     
 
         //0表示没有滞留时间限制，大于0则表示有滞留时间限制
         public static int[] p001_A_time = { 0, 0, 0, 0 };
@@ -64,15 +54,6 @@ namespace uI
 
 
 
-        public static string p001 = "";
-        public static string p002 = "";
-        public static string p003 = "";
-        public static string p004 = "";
-        public static string p005 = "";
-        public static string p006 = "";
-        public static string p007 = "";
-        public static string p008 = "";
-        public static string p009 = "";
-        public static string p010 = "";
+     
     }
 }
