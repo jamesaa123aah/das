@@ -13,6 +13,25 @@ namespace uI
          * 002进入A:"p002In"
          * 002离开A："p002Out"
          */
+
+        
+        public static string p001_num = "";
+        public static string p001_name = "";
+        //权限 0 允许  1禁止
+        public static string[] p001_A_permit = {"0","0","0","0"};
+       
+       /* public static string p001_A_permit = "";
+        public static string p001_B_permit = "";
+        public static string p001_C_permit = "";
+        public static string p001_D_permit = "";*/
+
+        //0表示没有滞留时间限制，大于0则表示有滞留时间限制
+        public static int[] p001_A_time = { 0, 0, 0, 0 };
+
+        public static Stack<String> p001_st = new Stack<String>();
+
+
+
         public static string p001 = "";
         public static string p002 = "";
         public static string p003 = "";

@@ -77,7 +77,11 @@ namespace uI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             Status.p001 = "001进入D区域";
+
+            Status.p001_st.Push("001进入D区域");
+
             button2.Enabled = false;
             button3.Enabled = true;
         }
@@ -85,6 +89,10 @@ namespace uI
         private void button3_Click(object sender, EventArgs e)
         {
             Status.p001 = "001离开D区域";
+
+            Status.p001_st.Push("001离开D区域");
+
+
             button3.Enabled = false;
             button2.Enabled = true;
         }

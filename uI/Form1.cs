@@ -190,10 +190,43 @@ namespace uI
         private void button6_Click(object sender, EventArgs e)
         {
 
-            Console.WriteLine("A"+Area.A_time+"s+"+Area.A_tag);
+            /*Console.WriteLine("A"+Area.A_time+"s+"+Area.A_tag);
             Console.WriteLine("B" + Area.B_time + "s+" + Area.B_tag);
             Console.WriteLine("C" + Area.C_time + "s+" + Area.C_tag);
-            Console.WriteLine("D" + Area.D_time + "s+" + Area.D_tag);
+            Console.WriteLine("D" + Area.D_time + "s+" + Area.D_tag);*/
+
+           
+            //向DataGridView中填充数据
+            /* DataGridView dgv = new DataGridView();
+            dgv.Columns.Add("A", "B"); 
+            
+
+            DataGridViewCellStyle style = new DataGridViewCellStyle();
+            style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+           List<string> lsInfo = new List<string>();
+
+           lsInfo.Add("ljd");
+           lsInfo.Add("www");
+
+            if (lsInfo != null && lsInfo.Count > 0)    //lsInfo就是List<数据> 
+            {
+                dataGridView2.Rows.Add(lsInfo.Count);
+                //data.Rows.Add(lsInfo.Count);
+            } 
+
+            for(int i=0;i<lsInfo.Count;i++) 
+
+            {
+                dataGridView2.Rows[i].Cells[0].Value = lsInfo[i];    //填充第一列的数据 
+                dataGridView2.Rows[i].Cells[1].Value = lsInfo[i];    //填充第二列的数据 
+
+            }*/
+
+            foreach (string c in Status.p001_st)
+            {
+                Console.Write(c + " ");
+            }
         }
 
         private void radioButton10_CheckedChanged(object sender, EventArgs e)
