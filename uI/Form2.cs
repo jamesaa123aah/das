@@ -77,10 +77,26 @@ namespace uI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY +":"+ s;
+       
+
+          
             
             Status.p001 = "001进入D区域";
 
-            Status.p001_st.Push("001进入D区域");
+           
+            Status.p001_track.number = "p001";
+            Status.p001_track.name = "张桦";
+            Status.p001_track.time = tem;
+            Status.p001_track.area = "进入D区域";
+            Status.p001_track.alarmingInfo = "非法闯入";
+            
+            Status.p001_st.Push(Status.p001_track);
 
             button2.Enabled = false;
             button3.Enabled = true;
@@ -88,9 +104,22 @@ namespace uI
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+            
             Status.p001 = "001离开D区域";
 
-            Status.p001_st.Push("001离开D区域");
+            Status.p001_track.area = "离开D区域";
+            Status.p001_track.number = "p001";
+            Status.p001_track.name = "张桦";
+            Status.p001_track.time = tem;
+            Status.p001_track.alarmingInfo = "无";
+
+            Status.p001_st.Push(Status.p001_track);
 
 
             button3.Enabled = false;
@@ -100,6 +129,24 @@ namespace uI
         private void button1_Click(object sender, EventArgs e)
         {
             Status.p002 = "002进入D区域";
+
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+           
+
+
+            Status.p002_track.number = "p002";
+            Status.p002_track.name = "李君蜂";
+            Status.p002_track.time = tem;
+            Status.p002_track.area = "进入D区域";
+            Status.p002_track.alarmingInfo = "非法闯入";
+
+            Status.p002_st.Push(Status.p002_track);
+            
             button1.Enabled = false;
             button7.Enabled = true;
             
@@ -108,6 +155,25 @@ namespace uI
         private void button7_Click(object sender, EventArgs e)
         {
             Status.p002 = "002离开D区域";
+
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+           
+
+
+            Status.p002_track.number = "p002";
+            Status.p002_track.name = "李君蜂";
+            Status.p002_track.time = tem;
+            Status.p002_track.area = "离开D区域";
+            Status.p002_track.alarmingInfo = "滞留超时";
+
+            Status.p002_st.Push(Status.p002_track);
+            
+
             button7.Enabled = false;
             button1.Enabled = true;
         }

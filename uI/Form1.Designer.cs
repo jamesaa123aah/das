@@ -96,6 +96,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -128,6 +132,8 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -135,17 +141,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.t从 = new System.Windows.Forms.TabControl();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.人员编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.区域 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.报警信息 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -168,12 +168,12 @@
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.t从.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -459,6 +459,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -522,7 +523,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.dataGridView3.Location = new System.Drawing.Point(1, 41);
+            this.dataGridView3.Location = new System.Drawing.Point(-7, 40);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 23;
             this.dataGridView3.Size = new System.Drawing.Size(671, 298);
@@ -876,6 +877,38 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "人员选择";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataGridView2.Location = new System.Drawing.Point(16, 37);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(284, 193);
+            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "编号";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 80;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "姓名";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "选择";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.groupBox5);
@@ -1193,6 +1226,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "限定行为";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(70, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "分钟";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(6, 137);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(58, 26);
+            this.textBox2.TabIndex = 38;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
@@ -1264,55 +1315,21 @@
             this.t从.TabIndex = 2;
             this.t从.Tag = "";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView2.Location = new System.Drawing.Point(16, 37);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(284, 193);
-            this.dataGridView2.TabIndex = 1;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "编号";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "姓名";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "选择";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
-            // 
             // 人员编号
             // 
             this.人员编号.HeaderText = "人员编号";
             this.人员编号.Name = "人员编号";
-            this.人员编号.Width = 120;
             // 
             // 姓名
             // 
             this.姓名.HeaderText = "姓名";
             this.姓名.Name = "姓名";
-            this.姓名.Width = 120;
             // 
             // 时间
             // 
             this.时间.HeaderText = "时间";
             this.时间.Name = "时间";
-            this.时间.Width = 120;
+            this.时间.Width = 190;
             // 
             // 区域
             // 
@@ -1325,24 +1342,6 @@
             this.报警信息.HeaderText = "报警信息";
             this.报警信息.Name = "报警信息";
             this.报警信息.Width = 120;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(6, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 26);
-            this.textBox2.TabIndex = 38;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "分钟";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
@@ -1380,6 +1379,7 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -1388,7 +1388,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.t从.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1501,17 +1500,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 人员编号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 时间;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 区域;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 报警信息;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 人员编号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 时间;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 区域;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 报警信息;
 
 
     }
