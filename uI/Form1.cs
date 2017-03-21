@@ -829,14 +829,14 @@ namespace uI
                 }
                 else if (radioButton2.Checked == true) {
                     //离开
-                       //进入
+                      
                     int i = comboBox1.SelectedIndex;
 
                     //判断是第几个人
                     switch (i)
                     {
                         case 0:
-                            Status.p001.alarming_A_In = 1;
+                            Status.p001.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p001.number;
@@ -849,7 +849,7 @@ namespace uI
 
                             break;
                         case 1:
-                            Status.p002.alarming_A_In = 1;
+                            Status.p002.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p002.number;
@@ -863,7 +863,7 @@ namespace uI
 
                             break;
                         case 2:
-                            Status.p003.alarming_A_In = 1;
+                            Status.p003.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p003.number;
@@ -877,7 +877,7 @@ namespace uI
 
                             break;
                         case 3:
-                            Status.p004.alarming_A_In = 1;
+                            Status.p004.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p004.number;
@@ -889,7 +889,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 4:
-                            Status.p005.alarming_A_In = 1;
+                            Status.p005.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p005.number;
@@ -901,7 +901,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 5:
-                            Status.p006.alarming_A_In = 1;
+                            Status.p006.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p006.number;
@@ -914,7 +914,7 @@ namespace uI
 
                             break;
                         case 6:
-                            Status.p007.alarming_A_In = 1;
+                            Status.p007.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p007.number;
@@ -927,7 +927,7 @@ namespace uI
 
                             break;
                         case 7:
-                            Status.p008.alarming_A_In = 1;
+                            Status.p008.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p008.number;
@@ -940,7 +940,7 @@ namespace uI
 
                             break;
                         case 8:
-                            Status.p009.alarming_A_In = 1;
+                            Status.p009.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p009.number;
@@ -953,7 +953,7 @@ namespace uI
 
                             break;
                         case 9:
-                            Status.p010.alarming_A_In = 1;
+                            Status.p010.alarming_A_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p010.number;
@@ -987,7 +987,7 @@ namespace uI
                     switch (i)
                     {
                         case 0:
-                            Status.p001.alarming_A_In = 1;
+                            Status.p001.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p001.number;
@@ -1000,7 +1000,7 @@ namespace uI
 
                             break;
                         case 1:
-                            Status.p002.alarming_A_In = 1;
+                            Status.p002.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p002.number;
@@ -1014,7 +1014,7 @@ namespace uI
                         
                             break;
                         case 2:
-                             Status.p003.alarming_A_In = 1;
+                            Status.p003.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p003.number;
@@ -1027,7 +1027,7 @@ namespace uI
 
                             break;
                         case 3:
-                             Status.p004.alarming_A_In = 1;
+                            Status.p004.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p004.number;
@@ -1039,8 +1039,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 4:
-                             Status.p005.alarming_A_In = 1;
-
+                            Status.p005.alarming_B_In = 1;
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p005.number;
                             AlarmingInfo.tem2.name = Status.p005.name;
@@ -1051,7 +1050,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 5:
-                             Status.p006.alarming_A_In = 1;
+                            Status.p006.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p006.number;
@@ -1063,7 +1062,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 6:
-                             Status.p007.alarming_A_In = 1;
+                            Status.p007.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p007.number;
@@ -1075,7 +1074,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 7:
-                             Status.p008.alarming_A_In = 1;
+                            Status.p008.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p008.number;
@@ -1087,7 +1086,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 8:
-                             Status.p009.alarming_A_In = 1;
+                            Status.p009.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p009.number;
@@ -1099,7 +1098,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 9:
-                             Status.p010.alarming_A_In = 1;
+                            Status.p010.alarming_B_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p010.number;
@@ -1129,7 +1128,7 @@ namespace uI
                     switch (i)
                     {
                         case 0:
-                            Status.p001.alarming_A_In = 1;
+                            Status.p001.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p001.number;
@@ -1142,7 +1141,7 @@ namespace uI
 
                             break;
                         case 1:
-                            Status.p002.alarming_A_In = 1;
+                            Status.p002.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p002.number;
@@ -1156,7 +1155,7 @@ namespace uI
 
                             break;
                         case 2:
-                            Status.p003.alarming_A_In = 1;
+                            Status.p003.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p003.number;
@@ -1169,7 +1168,7 @@ namespace uI
 
                             break;
                         case 3:
-                            Status.p004.alarming_A_In = 1;
+                            Status.p004.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p004.number;
@@ -1181,7 +1180,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 4:
-                            Status.p005.alarming_A_In = 1;
+                            Status.p005.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p005.number;
@@ -1193,7 +1192,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 5:
-                            Status.p006.alarming_A_In = 1;
+                            Status.p006.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p006.number;
@@ -1205,7 +1204,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 6:
-                            Status.p007.alarming_A_In = 1;
+                            Status.p007.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p007.number;
@@ -1217,7 +1216,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 7:
-                            Status.p008.alarming_A_In = 1;
+                            Status.p008.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p008.number;
@@ -1229,7 +1228,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 8:
-                            Status.p009.alarming_A_In = 1;
+                            Status.p009.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p009.number;
@@ -1241,7 +1240,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 9:
-                            Status.p010.alarming_A_In = 1;
+                            Status.p010.alarming_B_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p010.number;
@@ -1277,7 +1276,7 @@ namespace uI
                     switch (i)
                     {
                         case 0:
-                            Status.p001.alarming_A_In = 1;
+                            Status.p001.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p001.number;
@@ -1290,7 +1289,7 @@ namespace uI
 
                             break;
                         case 1:
-                            Status.p002.alarming_A_In = 1;
+                            Status.p002.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p002.number;
@@ -1304,7 +1303,7 @@ namespace uI
 
                             break;
                         case 2:
-                            Status.p003.alarming_A_In = 1;
+                            Status.p003.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p003.number;
@@ -1318,7 +1317,7 @@ namespace uI
 
                             break;
                         case 3:
-                            Status.p004.alarming_A_In = 1;
+                            Status.p004.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p004.number;
@@ -1330,7 +1329,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 4:
-                            Status.p005.alarming_A_In = 1;
+                            Status.p005.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p005.number;
@@ -1342,7 +1341,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 5:
-                            Status.p006.alarming_A_In = 1;
+                            Status.p006.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p006.number;
@@ -1355,7 +1354,7 @@ namespace uI
 
                             break;
                         case 6:
-                            Status.p007.alarming_A_In = 1;
+                            Status.p007.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p007.number;
@@ -1368,7 +1367,7 @@ namespace uI
 
                             break;
                         case 7:
-                            Status.p008.alarming_A_In = 1;
+                            Status.p008.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p008.number;
@@ -1381,7 +1380,7 @@ namespace uI
 
                             break;
                         case 8:
-                            Status.p009.alarming_A_In = 1;
+                            Status.p009.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p009.number;
@@ -1394,7 +1393,7 @@ namespace uI
 
                             break;
                         case 9:
-                            Status.p010.alarming_A_In = 1;
+                            Status.p010.alarming_C_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p010.number;
@@ -1419,7 +1418,7 @@ namespace uI
                     switch (i)
                     {
                         case 0:
-                            Status.p001.alarming_A_In = 1;
+                            Status.p001.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p001.number;
@@ -1432,7 +1431,7 @@ namespace uI
 
                             break;
                         case 1:
-                            Status.p002.alarming_A_In = 1;
+                            Status.p002.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p002.number;
@@ -1446,7 +1445,7 @@ namespace uI
 
                             break;
                         case 2:
-                            Status.p003.alarming_A_In = 1;
+                            Status.p003.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p003.number;
@@ -1460,7 +1459,7 @@ namespace uI
 
                             break;
                         case 3:
-                            Status.p004.alarming_A_In = 1;
+                            Status.p004.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p004.number;
@@ -1472,7 +1471,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 4:
-                            Status.p005.alarming_A_In = 1;
+                            Status.p005.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p005.number;
@@ -1484,7 +1483,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 5:
-                            Status.p006.alarming_A_In = 1;
+                            Status.p006.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p006.number;
@@ -1497,7 +1496,7 @@ namespace uI
 
                             break;
                         case 6:
-                            Status.p007.alarming_A_In = 1;
+                            Status.p007.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p007.number;
@@ -1510,7 +1509,7 @@ namespace uI
 
                             break;
                         case 7:
-                            Status.p008.alarming_A_In = 1;
+                            Status.p008.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p008.number;
@@ -1523,7 +1522,7 @@ namespace uI
 
                             break;
                         case 8:
-                            Status.p009.alarming_A_In = 1;
+                            Status.p009.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p009.number;
@@ -1536,7 +1535,7 @@ namespace uI
 
                             break;
                         case 9:
-                            Status.p010.alarming_A_In = 1;
+                            Status.p010.alarming_C_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p010.number;
@@ -1568,7 +1567,7 @@ namespace uI
                     switch (i)
                     {
                         case 0:
-                            Status.p001.alarming_A_In = 1;
+                            Status.p001.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p001.number;
@@ -1581,7 +1580,7 @@ namespace uI
 
                             break;
                         case 1:
-                            Status.p002.alarming_A_In = 1;
+                            Status.p002.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p002.number;
@@ -1595,7 +1594,7 @@ namespace uI
 
                             break;
                         case 2:
-                            Status.p003.alarming_A_In = 1;
+                            Status.p003.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p003.number;
@@ -1609,7 +1608,7 @@ namespace uI
 
                             break;
                         case 3:
-                            Status.p004.alarming_A_In = 1;
+                            Status.p004.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p004.number;
@@ -1621,7 +1620,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 4:
-                            Status.p005.alarming_A_In = 1;
+                            Status.p005.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p005.number;
@@ -1633,7 +1632,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 5:
-                            Status.p006.alarming_A_In = 1;
+                            Status.p006.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p006.number;
@@ -1646,7 +1645,7 @@ namespace uI
 
                             break;
                         case 6:
-                            Status.p007.alarming_A_In = 1;
+                            Status.p007.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p007.number;
@@ -1659,7 +1658,7 @@ namespace uI
 
                             break;
                         case 7:
-                            Status.p008.alarming_A_In = 1;
+                            Status.p008.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p008.number;
@@ -1672,7 +1671,7 @@ namespace uI
 
                             break;
                         case 8:
-                            Status.p009.alarming_A_In = 1;
+                            Status.p009.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p009.number;
@@ -1685,7 +1684,7 @@ namespace uI
 
                             break;
                         case 9:
-                            Status.p010.alarming_A_In = 1;
+                            Status.p010.alarming_D_In = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p010.number;
@@ -1711,7 +1710,7 @@ namespace uI
                     switch (i)
                     {
                         case 0:
-                            Status.p001.alarming_A_In = 1;
+                            Status.p001.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p001.number;
@@ -1724,7 +1723,7 @@ namespace uI
 
                             break;
                         case 1:
-                            Status.p002.alarming_A_In = 1;
+                            Status.p002.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p002.number;
@@ -1738,7 +1737,7 @@ namespace uI
 
                             break;
                         case 2:
-                            Status.p003.alarming_A_In = 1;
+                            Status.p003.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p003.number;
@@ -1752,7 +1751,7 @@ namespace uI
 
                             break;
                         case 3:
-                            Status.p004.alarming_A_In = 1;
+                            Status.p004.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p004.number;
@@ -1764,7 +1763,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 4:
-                            Status.p005.alarming_A_In = 1;
+                            Status.p005.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p005.number;
@@ -1776,7 +1775,7 @@ namespace uI
                             MessageBox.Show("报警条件设置成功");
                             break;
                         case 5:
-                            Status.p006.alarming_A_In = 1;
+                            Status.p006.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p006.number;
@@ -1789,7 +1788,7 @@ namespace uI
 
                             break;
                         case 6:
-                            Status.p007.alarming_A_In = 1;
+                            Status.p007.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p007.number;
@@ -1802,7 +1801,7 @@ namespace uI
 
                             break;
                         case 7:
-                            Status.p008.alarming_A_In = 1;
+                            Status.p008.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p008.number;
@@ -1815,7 +1814,7 @@ namespace uI
 
                             break;
                         case 8:
-                            Status.p009.alarming_A_In = 1;
+                            Status.p009.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p009.number;
@@ -1828,7 +1827,7 @@ namespace uI
 
                             break;
                         case 9:
-                            Status.p010.alarming_A_In = 1;
+                            Status.p010.alarming_D_Out = 1;
 
                             //将报警信息放入栈中，用于查询报警信息
                             AlarmingInfo.tem2.number = Status.p010.number;

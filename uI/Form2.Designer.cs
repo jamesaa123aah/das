@@ -351,6 +351,7 @@
             this.button61.TabIndex = 68;
             this.button61.Text = "离开";
             this.button61.UseVisualStyleBackColor = true;
+            this.button61.Click += new System.EventHandler(this.button61_Click);
             // 
             // label35
             // 
@@ -369,6 +370,7 @@
             this.button62.TabIndex = 67;
             this.button62.Text = "离开";
             this.button62.UseVisualStyleBackColor = true;
+            this.button62.Click += new System.EventHandler(this.button62_Click);
             // 
             // button63
             // 
@@ -407,6 +409,7 @@
             this.button65.TabIndex = 64;
             this.button65.Text = "进入";
             this.button65.UseVisualStyleBackColor = false;
+            this.button65.Click += new System.EventHandler(this.button65_Click);
             // 
             // label37
             // 
@@ -425,6 +428,7 @@
             this.button66.TabIndex = 63;
             this.button66.Text = "进入";
             this.button66.UseVisualStyleBackColor = false;
+            this.button66.Click += new System.EventHandler(this.button66_Click);
             // 
             // button67
             // 
@@ -586,6 +590,7 @@
             this.button41.TabIndex = 68;
             this.button41.Text = "离开";
             this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
             // 
             // button52
             // 
@@ -622,6 +627,7 @@
             this.button42.TabIndex = 67;
             this.button42.Text = "离开";
             this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // button54
             // 
@@ -989,6 +995,7 @@
             this.button21.TabIndex = 77;
             this.button21.Text = "离开";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -998,6 +1005,7 @@
             this.button22.TabIndex = 76;
             this.button22.Text = "离开";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -1027,6 +1035,7 @@
             this.button25.TabIndex = 73;
             this.button25.Text = "进入";
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
@@ -1036,6 +1045,7 @@
             this.button26.TabIndex = 72;
             this.button26.Text = "进入";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
             // 
@@ -1308,6 +1318,7 @@
             this.button10.TabIndex = 58;
             this.button10.Text = "离开";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -1347,6 +1358,7 @@
             this.button6.TabIndex = 54;
             this.button6.Text = "进入";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
