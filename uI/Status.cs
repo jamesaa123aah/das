@@ -64,6 +64,18 @@ namespace uI
             public string number;
             public string name;
             public string location; //人员当前的位置
+           
+            //个人报警信息设置，是否允许进入 0：“允许” 1：“禁止”
+            public int alarming_A_In;
+            public int alarming_B_In;
+            public int alarming_C_In;
+            public int alarming_D_In;
+
+            //个人报警信息设置，是否允许出去 0：“允许” 1：“禁止”
+            public int alarming_A_Out;
+            public int alarming_B_Out;
+            public int alarming_C_Out;
+            public int alarming_D_Out;
         };
 
 

@@ -112,26 +112,26 @@ namespace uI
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-           
-            form1.numericUpDown1.Value = numericUpDown1.Value;
+
+            form1.numericUpDown1.Value = form1.numericUpDown1.Value;
             form1.Update();
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
 
-            form1.numericUpDown2.Value = numericUpDown2.Value;
+            form1.numericUpDown2.Value = form1.numericUpDown2.Value;
            // form1.Update();
         }
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
-            form1.numericUpDown3.Value = numericUpDown3.Value;
+            form1.numericUpDown3.Value = form1.numericUpDown3.Value;
         }
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
-            form1.numericUpDown4.Value = numericUpDown4.Value;
+            form1.numericUpDown4.Value = form1.numericUpDown4.Value;
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -525,7 +525,7 @@ namespace uI
             Status.p001_track.alarmingInfo = "";
             Status.p001.location = "B";//该人员的当前位置
             //判断D区域是否允许进入
-            if (Area.Area_A.tag == 1)
+            if (Area.Area_B.tag == 1)
             {
                 Status.p001_track.alarmingInfo = "非法闯入B区域";
                 form1.richTextBox1.AppendText(Status.p001_track.name + " " + Status.p001_track.alarmingInfo + " " + tem + "\r\n");
@@ -560,7 +560,7 @@ namespace uI
             Status.p001_track.alarmingInfo = "";
             Status.p001.location = "无";//该人员的当前位置
             //判断B区域是否允许离开
-            if (Area.Area_A.tag2 == 1)
+            if (Area.Area_B.tag2 == 1)
             {
                 Status.p001_track.alarmingInfo = "非法离开B区域";
                 form1.richTextBox1.AppendText(Status.p001_track.name + " " + Status.p001_track.alarmingInfo + " " + tem + "\r\n");
@@ -595,7 +595,7 @@ namespace uI
             Status.p001_track.alarmingInfo = "";
             Status.p001.location = "C";//该人员的当前位置
             //判断D区域是否允许进入
-            if (Area.Area_A.tag == 1)
+            if (Area.Area_C.tag == 1)
             {
                 Status.p001_track.alarmingInfo = "非法闯入C区域";
                 form1.richTextBox1.AppendText(Status.p001_track.name + " " + Status.p001_track.alarmingInfo + " " + tem + "\r\n");
@@ -630,7 +630,7 @@ namespace uI
             Status.p001_track.alarmingInfo = "";
             Status.p001.location = "空";//该人员的当前位置
             //判断C区域是否允许离开
-            if (Area.Area_A.tag2 == 1)
+            if (Area.Area_C.tag2 == 1)
             {
                 Status.p001_track.alarmingInfo = "非法离开C区域";
                 form1.richTextBox1.AppendText(Status.p001_track.name + " " + Status.p001_track.alarmingInfo + " " + tem + "\r\n");

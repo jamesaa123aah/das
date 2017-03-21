@@ -25,6 +25,21 @@ namespace uI
         public static Stack<AlarmInfoArea> alarmInfo_area= new Stack<AlarmInfoArea>();
 
 
+        /*
+         * 报警信息（按个人查询）
+         */
+        public struct AlarmInfoPerson
+        {
+
+            public string number;
+            public string name;
+            public string area;
+            public string type;
+        }
+
+
+        public static AlarmInfoPerson tem2;
+        public static Stack<AlarmInfoPerson> alarmInfo_person = new Stack<AlarmInfoPerson>();
 
 
     }

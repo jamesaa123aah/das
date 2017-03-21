@@ -13,69 +13,24 @@ namespace uI
 {
     public partial class Form1 : Form
     {
-        /*
-
-        //新建定时器。要用System.Timers.Timer。
-        //不要用forms.Timer的定时器。这个不精准
-        System.Timers.Timer myTimer;
-        void Form1_Load(object sender, EventArgs e)
-        {
-            myTimer = new System.Timers.Timer(1000);//定时周期2秒
-            myTimer.Elapsed += myTimer_Elapsed;//到2秒了做的事件
-            myTimer.AutoReset = true; //是否不断重复定时器操作
-        }
-
-
-        //定时器的定时操作
-        void myTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
-        {
-
-           // numericUpDown1.Value = numericUpDown4.Value = 0;
-            //判断人员所出的位置
-            //A区域
-                if (Status.p001.location == "A")
-                {
-                    numericUpDown1.Value = numericUpDown1.Value + 1;
-                    Status.p001.location = "Q";
-                }
-                if (Status.p002.location == "A")
-                {
-                    numericUpDown1.Value = numericUpDown1.Value + 1;
-                    Status.p002.location = "Q";
-                }
-                 if (Status.p003.location == "A")
-                {
-                    numericUpDown1.Value = numericUpDown1.Value + 1;
-                    Status.p003.location = "Q";
-                }
-                
-            
-                //D区域
-                if (Status.p001.location == "D")
-                {
-                    numericUpDown4.Value = numericUpDown4.Value + 1;
-                    Status.p001.location = "Q";
-                }
-                 if (Status.p002.location == "D")
-                {
-                    numericUpDown4.Value = numericUpDown4.Value + 1;
-                    Status.p002.location = "Q";
-                }
-                if (Status.p003.location == "D")
-                {
-                    numericUpDown4.Value = numericUpDown4.Value + 1;
-                    Status.p003.location = "Q";
-                }
-
-           
-        }
-        */
+        
 
 
 
         public Form1()
         {
             InitializeComponent();
+
+            comboBox1.Items.Insert(0, "p001");
+            comboBox1.Items.Insert(1, "p002");
+            comboBox1.Items.Insert(2, "p003");
+            comboBox1.Items.Insert(3, "p004");
+            comboBox1.Items.Insert(4, "p005");
+            comboBox1.Items.Insert(5, "p006");
+            comboBox1.Items.Insert(6, "p007");
+            comboBox1.Items.Insert(7, "p008");
+            comboBox1.Items.Insert(8, "p009");
+            comboBox1.Items.Insert(9, "p010");
 
            
         }
@@ -470,7 +425,7 @@ namespace uI
              * 
              */
 
-            if(checkBox1.CheckState==CheckState.Checked){
+            if(radioButton14.Checked==true){
                 
                 //区域A
                 
@@ -514,7 +469,7 @@ namespace uI
             /*
              * 区域B
              * */
-            else if (checkBox2.CheckState == CheckState.Checked)
+            else if (radioButton12.Checked == true)
             {
                 
                 if (radioButton10.Checked == true)
@@ -561,7 +516,7 @@ namespace uI
              * 区域C
              * 
              */
-            else if (checkBox3.CheckState == CheckState.Checked)
+            else if (radioButton13.Checked == true)
             {
           
                 if (radioButton10.Checked == true)
@@ -607,7 +562,7 @@ namespace uI
                  * 
                  * //区域D
                  */
-            else if (checkBox4.CheckState == CheckState.Checked)
+            else if (radioButton11.Checked == true)
             {
                 
                 if (radioButton10.Checked == true)
@@ -703,6 +658,1288 @@ namespace uI
         }
 
         private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        /*
+         * 个人报警信息设置按钮
+         * */
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            //区域A的选定
+            if (radioButton7.Checked == true) {
+
+                if (radioButton4.Checked == true) {
+                    //进入
+                    int i = comboBox1.SelectedIndex;
+
+                    //判断是第几个人
+                    switch (i){
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                              Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                           
+                            break;
+                        case 2:
+                            Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            
+                            break;
+                        case 3:
+                            Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                            Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                            Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 6:
+                            Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 7:
+                            Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 8:
+                            Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 9:
+                            Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        default:
+                            break;
+
+
+
+
+
+                    }
+                   
+                }
+                else if (radioButton2.Checked == true) {
+                    //离开
+                       //进入
+                    int i = comboBox1.SelectedIndex;
+
+                    //判断是第几个人
+                    switch (i)
+                    {
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                            Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 2:
+                            Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 3:
+                            Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                            Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                            Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 6:
+                            Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 7:
+                            Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 8:
+                            Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 9:
+                            Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域A";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        default:
+                            break;
+
+                    }
+                }
+                else if (radioButton3.Checked == true)
+                {
+                    //滞留
+                }
+            }  
+            else if (radioButton1.Checked == true) //区域B的选定
+            {
+                if (radioButton4.Checked == true)
+                {
+                    //进入
+                    int i = comboBox1.SelectedIndex;
+                   
+
+                    //判断是第几个人
+                    switch (i)
+                    {
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                            Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                        
+                            break;
+                        case 2:
+                             Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 3:
+                             Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                             Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                             Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 6:
+                             Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 7:
+                             Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 8:
+                             Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 9:
+                             Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        default:
+                            break;
+
+
+
+
+
+                    }
+                }
+                else if (radioButton2.Checked == true)
+                {
+                    //离开
+                    int i = comboBox1.SelectedIndex;
+
+
+                    //判断是第几个人
+                    switch (i)
+                    {
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                            Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 2:
+                            Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 3:
+                            Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                            Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                            Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 6:
+                            Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 7:
+                            Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 8:
+                            Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 9:
+                            Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域B";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        default:
+                            break;
+
+
+
+
+
+                    }
+                }
+                else if (radioButton3.Checked == true)
+                {
+                    //滞留
+                }
+            }
+            else if (radioButton5.Checked == true)//区域C的选定
+            {
+                if (radioButton4.Checked == true)
+                {
+                    //进入
+                    int i = comboBox1.SelectedIndex;
+
+                    //判断是第几个人
+                    switch (i)
+                    {
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                            Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 2:
+                            Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 3:
+                            Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                            Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                            Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 6:
+                            Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 7:
+                            Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 8:
+                            Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 9:
+                            Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else if (radioButton2.Checked == true)
+                {
+                    //离开
+                    int i = comboBox1.SelectedIndex;
+
+                    //判断是第几个人
+                    switch (i)
+                    {
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                            Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 2:
+                            Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 3:
+                            Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                            Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                            Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 6:
+                            Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 7:
+                            Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 8:
+                            Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 9:
+                            Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域C";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else if (radioButton3.Checked == true)
+                {
+                    //滞留
+                }
+            }
+            else if (radioButton8.Checked == true) //区域D的选定
+            {
+                if (radioButton4.Checked == true)
+                {
+                    //进入
+                    int i = comboBox1.SelectedIndex;
+
+                    //判断是第几个人
+                    switch (i)
+                    {
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                            Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 2:
+                            Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 3:
+                            Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                            Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                            Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 6:
+                            Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 7:
+                            Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 8:
+                            Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 9:
+                            Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止进入";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        default:
+                            break;
+                    }
+
+                }
+                else if (radioButton2.Checked == true)
+                {
+                    //离开
+                    int i = comboBox1.SelectedIndex;
+
+                    //判断是第几个人
+                    switch (i)
+                    {
+                        case 0:
+                            Status.p001.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p001.number;
+                            AlarmingInfo.tem2.name = Status.p001.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 1:
+                            Status.p002.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p002.number;
+                            AlarmingInfo.tem2.name = Status.p002.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 2:
+                            Status.p003.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p003.number;
+                            AlarmingInfo.tem2.name = Status.p003.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+
+                            break;
+                        case 3:
+                            Status.p004.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p004.number;
+                            AlarmingInfo.tem2.name = Status.p004.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 4:
+                            Status.p005.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p005.number;
+                            AlarmingInfo.tem2.name = Status.p005.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+                            break;
+                        case 5:
+                            Status.p006.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p006.number;
+                            AlarmingInfo.tem2.name = Status.p006.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 6:
+                            Status.p007.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p007.number;
+                            AlarmingInfo.tem2.name = Status.p007.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 7:
+                            Status.p008.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p008.number;
+                            AlarmingInfo.tem2.name = Status.p008.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 8:
+                            Status.p009.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p009.number;
+                            AlarmingInfo.tem2.name = Status.p009.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        case 9:
+                            Status.p010.alarming_A_In = 1;
+
+                            //将报警信息放入栈中，用于查询报警信息
+                            AlarmingInfo.tem2.number = Status.p010.number;
+                            AlarmingInfo.tem2.name = Status.p010.name;
+                            AlarmingInfo.tem2.area = "区域D";
+                            AlarmingInfo.tem2.type = "禁止离开";
+
+                            AlarmingInfo.alarmInfo_person.Push(AlarmingInfo.tem2);
+                            MessageBox.Show("报警条件设置成功");
+
+                            break;
+                        default:
+                            break;
+                    }
+
+                }
+                else if (radioButton3.Checked == true)
+                {
+                    //滞留
+                }
+            }
+        }
+
+        private void radioButton7_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton8_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            //报警信息查询（按照个人查询）
+
+            //清空表中数据
+            dataGridView5.Rows.Clear();
+
+            List<string> lsInfo1 = new List<string>();
+            List<string> lsInfo2 = new List<string>();
+            List<string> lsInfo3 = new List<string>();
+            List<string> lsInfo4 = new List<string>();
+
+            foreach (AlarmingInfo.AlarmInfoPerson c in AlarmingInfo.alarmInfo_person)
+            {
+                lsInfo1.Add(c.number);
+                lsInfo2.Add(c.name);
+                lsInfo3.Add(c.area);
+                lsInfo4.Add(c.type);
+
+            }
+
+            if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+            {
+                dataGridView5.Rows.Add(lsInfo1.Count);
+                //data.Rows.Add(lsInfo.Count);
+            }
+
+            for (int i = 0; i < lsInfo1.Count; i++)
+            {
+                dataGridView5.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                dataGridView5.Rows[i].Cells[1].Value = lsInfo2[i];
+                dataGridView5.Rows[i].Cells[2].Value = lsInfo3[i];
+                dataGridView5.Rows[i].Cells[3].Value = lsInfo4[i];
+
+            }
+        }
+
+        private void radioButton14_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton12_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton13_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton11_CheckedChanged(object sender, EventArgs e)
         {
 
         }
