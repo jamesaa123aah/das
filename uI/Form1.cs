@@ -152,6 +152,258 @@ namespace uI
                     }
                     break;
 
+                case "p003":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p003_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
+
+                case "p004":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p004_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
+
+                case "p005":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p005_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
+                case "p006":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p006_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
+
+                case "p007":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p007_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
+                case "p008":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p008_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
+                case "p009":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p009_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
+
+                case "p010":
+
+                    //清空表中数据
+                    dataGridView1.Rows.Clear();
+
+
+
+                    foreach (Status.Person_track c in Status.p010_st)
+                    {
+                        lsInfo1.Add(c.number);
+                        lsInfo2.Add(c.name);
+                        lsInfo3.Add(c.time);
+                        lsInfo4.Add(c.area);
+                        lsInfo5.Add(c.alarmingInfo);
+                    }
+
+                    if (lsInfo1 != null && lsInfo1.Count > 0)    //lsInfo就是List<数据> 
+                    {
+                        dataGridView1.Rows.Add(lsInfo1.Count);
+                        //data.Rows.Add(lsInfo.Count);
+                    }
+
+                    for (int i = 0; i < lsInfo1.Count; i++)
+                    {
+                        dataGridView1.Rows[i].Cells[0].Value = lsInfo1[i];   //填充第一列的数据 
+                        dataGridView1.Rows[i].Cells[1].Value = lsInfo2[i];
+                        dataGridView1.Rows[i].Cells[2].Value = lsInfo3[i];
+                        dataGridView1.Rows[i].Cells[3].Value = lsInfo4[i];
+                        dataGridView1.Rows[i].Cells[4].Value = lsInfo5[i];
+                    }
+                    break;
                 default:
 
                     MessageBox.Show("不存在此人");
@@ -1939,6 +2191,11 @@ namespace uI
         }
 
         private void radioButton11_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

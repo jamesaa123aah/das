@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.B = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button71 = new System.Windows.Forms.Button();
@@ -165,49 +161,13 @@
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(524, 130);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 12);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "A区域：";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(524, 176);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 12);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "B区域：";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(524, 217);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 12);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "C区域：";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(524, 267);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 12);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "D区域：";
-            // 
             // B
             // 
             this.B.Controls.Add(this.tabPage1);
             this.B.Controls.Add(this.tabPage2);
             this.B.Controls.Add(this.tabPage3);
             this.B.Controls.Add(this.tabPage4);
-            this.B.Location = new System.Drawing.Point(123, 26);
+            this.B.Location = new System.Drawing.Point(37, 26);
             this.B.Name = "B";
             this.B.SelectedIndex = 0;
             this.B.Size = new System.Drawing.Size(459, 313);
@@ -252,6 +212,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "A区域";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // button71
             // 
@@ -288,6 +249,7 @@
             this.button74.TabIndex = 75;
             this.button74.Text = "离开";
             this.button74.UseVisualStyleBackColor = true;
+            this.button74.Click += new System.EventHandler(this.button74_Click);
             // 
             // button75
             // 
@@ -324,6 +286,7 @@
             this.button78.TabIndex = 71;
             this.button78.Text = "进入";
             this.button78.UseVisualStyleBackColor = false;
+            this.button78.Click += new System.EventHandler(this.button78_Click);
             // 
             // button79
             // 
@@ -333,6 +296,7 @@
             this.button79.TabIndex = 70;
             this.button79.Text = "离开";
             this.button79.UseVisualStyleBackColor = true;
+            this.button79.Click += new System.EventHandler(this.button79_Click);
             // 
             // button80
             // 
@@ -342,6 +306,7 @@
             this.button80.TabIndex = 69;
             this.button80.Text = "进入";
             this.button80.UseVisualStyleBackColor = false;
+            this.button80.Click += new System.EventHandler(this.button80_Click);
             // 
             // button61
             // 
@@ -637,6 +602,7 @@
             this.button54.TabIndex = 65;
             this.button54.Text = "离开";
             this.button54.UseVisualStyleBackColor = true;
+            this.button54.Click += new System.EventHandler(this.button54_Click);
             // 
             // label26
             // 
@@ -711,6 +677,7 @@
             this.button58.TabIndex = 61;
             this.button58.Text = "进入";
             this.button58.UseVisualStyleBackColor = false;
+            this.button58.Click += new System.EventHandler(this.button58_Click);
             // 
             // label28
             // 
@@ -729,6 +696,7 @@
             this.button59.TabIndex = 60;
             this.button59.Text = "离开";
             this.button59.UseVisualStyleBackColor = true;
+            this.button59.Click += new System.EventHandler(this.button59_Click);
             // 
             // button45
             // 
@@ -930,6 +898,7 @@
             this.button34.TabIndex = 84;
             this.button34.Text = "离开";
             this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // button35
             // 
@@ -977,6 +946,7 @@
             this.button39.TabIndex = 79;
             this.button39.Text = "离开";
             this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // button40
             // 
@@ -986,6 +956,7 @@
             this.button40.TabIndex = 78;
             this.button40.Text = "进入";
             this.button40.UseVisualStyleBackColor = false;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
             // 
             // button21
             // 
@@ -1252,6 +1223,7 @@
             this.button14.TabIndex = 65;
             this.button14.Text = "离开";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -1290,6 +1262,7 @@
             this.button18.TabIndex = 61;
             this.button18.Text = "进入";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -1299,6 +1272,7 @@
             this.button19.TabIndex = 60;
             this.button19.Text = "离开";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -1505,12 +1479,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(788, 405);
+            this.ClientSize = new System.Drawing.Size(554, 376);
             this.Controls.Add(this.B);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
             this.Name = "Form2";
             this.Text = "模拟器(用于硬件的模拟)";
             this.B.ResumeLayout(false);
@@ -1523,16 +1493,11 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabControl B;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
