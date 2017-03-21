@@ -88,14 +88,6 @@
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
-            this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -163,7 +155,6 @@
             this.tabPage5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage6.SuspendLayout();
@@ -205,11 +196,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(582, 83);
+            this.button6.Location = new System.Drawing.Point(582, 6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(56, 23);
             this.button6.TabIndex = 28;
-            this.button6.Text = "测试";
+            this.button6.Text = "启动";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -292,7 +283,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(572, 7);
+            this.button5.Location = new System.Drawing.Point(582, 47);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 20;
@@ -322,43 +313,28 @@
             // numericUpDown4
             // 
             this.numericUpDown4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown4.Location = new System.Drawing.Point(374, 310);
+            this.numericUpDown4.Location = new System.Drawing.Point(387, 311);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(46, 29);
             this.numericUpDown4.TabIndex = 15;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            86,
-            0,
-            0,
-            0});
             this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // numericUpDown3
             // 
             this.numericUpDown3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown3.Location = new System.Drawing.Point(80, 319);
+            this.numericUpDown3.Location = new System.Drawing.Point(80, 316);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(43, 29);
             this.numericUpDown3.TabIndex = 14;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
             this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown2.Location = new System.Drawing.Point(369, 128);
+            this.numericUpDown2.Location = new System.Drawing.Point(344, 113);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(41, 29);
             this.numericUpDown2.TabIndex = 13;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            98,
-            0,
-            0,
-            0});
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // numericUpDown1
@@ -368,16 +344,11 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(43, 29);
             this.numericUpDown1.TabIndex = 12;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            78,
-            0,
-            0,
-            0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(692, 6);
+            this.dateTimePicker1.Location = new System.Drawing.Point(700, 20);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 21);
             this.dateTimePicker1.TabIndex = 11;
@@ -634,7 +605,6 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.tabControl1);
             this.tabPage2.Controls.Add(this.textBox5);
             this.tabPage2.Controls.Add(this.label5);
@@ -649,11 +619,11 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(441, 46);
+            this.button1.Location = new System.Drawing.Point(366, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 29);
             this.button1.TabIndex = 10;
-            this.button1.Text = "保存";
+            this.button1.Text = "确定";
             this.button1.UseMnemonic = false;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -672,7 +642,6 @@
             // 
             this.tabPage5.Controls.Add(this.groupBox4);
             this.tabPage5.Controls.Add(this.groupBox1);
-            this.tabPage5.Controls.Add(this.groupBox6);
             this.tabPage5.Controls.Add(this.button4);
             this.tabPage5.Controls.Add(this.button2);
             this.tabPage5.Controls.Add(this.groupBox3);
@@ -782,89 +751,6 @@
             this.checkBox10.Text = "区域A";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox8);
-            this.groupBox6.Controls.Add(this.textBox7);
-            this.groupBox6.Controls.Add(this.label8);
-            this.groupBox6.Controls.Add(this.label7);
-            this.groupBox6.Controls.Add(this.radioButton24);
-            this.groupBox6.Controls.Add(this.radioButton25);
-            this.groupBox6.Controls.Add(this.radioButton26);
-            this.groupBox6.Location = new System.Drawing.Point(628, 31);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(200, 224);
-            this.groupBox6.TabIndex = 19;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "限定时间";
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(84, 148);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 26);
-            this.textBox8.TabIndex = 18;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(84, 88);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 26);
-            this.textBox7.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 151);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 16);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "结束时间";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 16);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "开始时间";
-            this.label7.Click += new System.EventHandler(this.label7_Click_1);
-            // 
-            // radioButton24
-            // 
-            this.radioButton24.AutoSize = true;
-            this.radioButton24.Location = new System.Drawing.Point(70, 25);
-            this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(58, 20);
-            this.radioButton24.TabIndex = 13;
-            this.radioButton24.TabStop = true;
-            this.radioButton24.Text = "每月";
-            this.radioButton24.UseVisualStyleBackColor = true;
-            // 
-            // radioButton25
-            // 
-            this.radioButton25.AutoSize = true;
-            this.radioButton25.Location = new System.Drawing.Point(134, 25);
-            this.radioButton25.Name = "radioButton25";
-            this.radioButton25.Size = new System.Drawing.Size(58, 20);
-            this.radioButton25.TabIndex = 14;
-            this.radioButton25.TabStop = true;
-            this.radioButton25.Text = "每周";
-            this.radioButton25.UseVisualStyleBackColor = true;
-            // 
-            // radioButton26
-            // 
-            this.radioButton26.AutoSize = true;
-            this.radioButton26.Location = new System.Drawing.Point(6, 25);
-            this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(58, 20);
-            this.radioButton26.TabIndex = 12;
-            this.radioButton26.TabStop = true;
-            this.radioButton26.Text = "每天";
-            this.radioButton26.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(485, 290);
@@ -928,6 +814,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.button1);
             this.tabPage6.Controls.Add(this.groupBox5);
             this.tabPage6.Controls.Add(this.groupBox7);
             this.tabPage6.Controls.Add(this.groupBox2);
@@ -1300,7 +1187,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(116, 28);
+            this.textBox5.Location = new System.Drawing.Point(191, 23);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(197, 26);
             this.textBox5.TabIndex = 5;
@@ -1309,7 +1196,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 35);
+            this.label5.Location = new System.Drawing.Point(113, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 1;
@@ -1363,8 +1250,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage6.ResumeLayout(false);
@@ -1421,14 +1306,6 @@
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton24;
-        private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.RadioButton radioButton26;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox3;

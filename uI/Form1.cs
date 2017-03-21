@@ -8,15 +8,76 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Timers;
 namespace uI
 {
     public partial class Form1 : Form
     {
+        /*
+
+        //新建定时器。要用System.Timers.Timer。
+        //不要用forms.Timer的定时器。这个不精准
+        System.Timers.Timer myTimer;
+        void Form1_Load(object sender, EventArgs e)
+        {
+            myTimer = new System.Timers.Timer(1000);//定时周期2秒
+            myTimer.Elapsed += myTimer_Elapsed;//到2秒了做的事件
+            myTimer.AutoReset = true; //是否不断重复定时器操作
+        }
+
+
+        //定时器的定时操作
+        void myTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+
+           // numericUpDown1.Value = numericUpDown4.Value = 0;
+            //判断人员所出的位置
+            //A区域
+                if (Status.p001.location == "A")
+                {
+                    numericUpDown1.Value = numericUpDown1.Value + 1;
+                    Status.p001.location = "Q";
+                }
+                if (Status.p002.location == "A")
+                {
+                    numericUpDown1.Value = numericUpDown1.Value + 1;
+                    Status.p002.location = "Q";
+                }
+                 if (Status.p003.location == "A")
+                {
+                    numericUpDown1.Value = numericUpDown1.Value + 1;
+                    Status.p003.location = "Q";
+                }
+                
+            
+                //D区域
+                if (Status.p001.location == "D")
+                {
+                    numericUpDown4.Value = numericUpDown4.Value + 1;
+                    Status.p001.location = "Q";
+                }
+                 if (Status.p002.location == "D")
+                {
+                    numericUpDown4.Value = numericUpDown4.Value + 1;
+                    Status.p002.location = "Q";
+                }
+                if (Status.p003.location == "D")
+                {
+                    numericUpDown4.Value = numericUpDown4.Value + 1;
+                    Status.p003.location = "Q";
+                }
+
+           
+        }
+        */
+
 
 
         public Form1()
         {
             InitializeComponent();
+
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -224,22 +285,22 @@ namespace uI
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
+           /* textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
             decimal tem = 293;
             textBox24.Text =(tem-(numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value)).ToString();
             Random random = new Random();
             if(random.Next(10,13)==10)
             richTextBox1.AppendText(DateTime.Now.ToString()+" A区域非法离开\r\n");
             else
-                richTextBox1.AppendText(DateTime.Now.ToString() + " A区域非法进入\r\n");
+                richTextBox1.AppendText(DateTime.Now.ToString() + " A区域非法进入\r\n");*/
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
+           /* textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
             decimal tem = 293;
             textBox24.Text = (tem - (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value)).ToString();
-            richTextBox1.AppendText(DateTime.Now.ToString() + " B区域\r\n");
+            richTextBox1.AppendText(DateTime.Now.ToString() + " B区域\r\n");*/
         }
 
         private void textBox23_TextChanged(object sender, EventArgs e)
@@ -251,20 +312,20 @@ namespace uI
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
-            textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
+            /*textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
             decimal tem = 293;
             textBox24.Text = (tem - (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value)).ToString();
-            richTextBox1.AppendText(DateTime.Now.ToString() + " C区域\r\n");
+            richTextBox1.AppendText(DateTime.Now.ToString() + " C区域\r\n");*/
         }
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
-            textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
+           /* textBox23.Text = (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value).ToString();
             decimal tem = 293;
             textBox24.Text = (tem - (numericUpDown1.Value + numericUpDown2.Value + numericUpDown3.Value + numericUpDown4.Value)).ToString();
            
             //
-            richTextBox1.AppendText(DateTime.Now.ToString() + " D区域\r\n");
+            richTextBox1.AppendText(DateTime.Now.ToString() + " D区域\r\n");*/
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -273,6 +334,8 @@ namespace uI
 
             Form2 form2 = new Form2(this);
             form2.Show();
+
+            button5.Enabled = false;
            
         }
 
@@ -290,11 +353,63 @@ namespace uI
         {
 
         }
+        
 
+        //启动按钮
         private void button6_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(Area.Area_A.tag2);
-            Console.WriteLine(Area.Area_B.tag);
+           //模拟器启动按钮
+            button5.PerformClick();
+
+
+
+            //初始化各个区域的人员数量
+
+            /*
+             * step1.将所有的人员放进栈
+             */
+
+            Stack<Status.Person> s = new Stack<Status.Person>();
+            Status.Person tem;//接收某个人
+            s.Push(Status.p001);
+            s.Push(Status.p002);
+            s.Push(Status.p003);
+            s.Push(Status.p004);
+            s.Push(Status.p005);
+            s.Push(Status.p006);
+            s.Push(Status.p007);
+            s.Push(Status.p008);
+            s.Push(Status.p009);
+            s.Push(Status.p010);
+        
+            for (int i = 0; i < 10; i++) {
+
+                tem = s.Pop();
+                switch (tem.location)
+                {
+
+                    case "A":
+                        numericUpDown1.Value = numericUpDown1.Value + 1;
+                        break;
+                    case "B":
+                        numericUpDown2.Value = numericUpDown2.Value + 1;
+                        break;
+                    case "C":
+                        numericUpDown3.Value = numericUpDown3.Value + 1;
+                        break;
+                    case "D":
+                        numericUpDown4.Value = numericUpDown4.Value + 1;
+                        break;
+                   
+                    default:
+                        break;
+                }
+
+            }
+
+            
+            button6.Enabled = false;
+
 
         }
 
@@ -362,7 +477,7 @@ namespace uI
                 if (radioButton10.Checked==true) {
                    
                     
-                    Area.Area_A.tag = 1;
+                    Area.Area_A.tag = 1;//禁止进入
 
                     //将报警信息放入栈中，用于历史查询
                     AlarmingInfo.tem.area = "A区域";
@@ -370,6 +485,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止进入";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton9.Checked == true) {
 
@@ -381,6 +497,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止滞留超时";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton6.Checked == true) {
                     Area.Area_A.tag2 = 1;
@@ -391,6 +508,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止离开";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
             }
             /*
@@ -410,6 +528,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止进入";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton9.Checked == true)
                 {
@@ -422,6 +541,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止滞留超时";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton6.Checked == true)
                 {
@@ -433,6 +553,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止离开";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
             }
 
@@ -453,6 +574,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止进入";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton9.Checked == true)
                 {
@@ -465,6 +587,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止滞留超时";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton6.Checked == true)
                 {
@@ -476,6 +599,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止离开";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
             }
 
@@ -496,6 +620,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止进入";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton9.Checked == true)
                 {
@@ -508,6 +633,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止滞留超时";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
                 else if (radioButton6.Checked == true)
                 {
@@ -519,6 +645,7 @@ namespace uI
                     AlarmingInfo.tem.type = "禁止离开";
 
                     AlarmingInfo.alarmInfo_area.Push(AlarmingInfo.tem);
+                    MessageBox.Show("报警条件设置成功");
                 }
             }
             else {

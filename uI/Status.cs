@@ -16,7 +16,9 @@ namespace uI
             public string time;
             public string area;
             public string alarmingInfo;
+            //public string location;
         };
+
 
 
         public static Person_track p001_track;
@@ -30,12 +32,8 @@ namespace uI
         public static Person_track p009_track;
         public static Person_track p010_track;
 
-        public struct Person
-        {
-           public string location;
-        };
-       
-
+ 
+      
         //0表示没有滞留时间限制，大于0则表示有滞留时间限制
         public static int[] p001_A_time = { 0, 0, 0, 0 };
 
@@ -51,9 +49,34 @@ namespace uI
         public static Stack<Person_track> p010_st = new Stack<Person_track>();
 
 
+        /*
+  
+         * * 
+ 
+         * *记录人员的个人信息 
+ 
+  
+         * * * 
+ 
+         * */
+        public struct Person
+        {
+            public string number;
+            public string name;
+            public string location; //人员当前的位置
+        };
 
 
-
-     
+        public static Person p001;
+        public static Person p002;
+        public static Person p003;
+        public static Person p004;
+        public static Person p005;
+        public static Person p006;
+        public static Person p007;
+        public static Person p008;
+        public static Person p009;
+        public static Person p010;
+    
     }
 }
