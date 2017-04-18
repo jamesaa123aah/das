@@ -222,6 +222,7 @@
             this.button71.TabIndex = 78;
             this.button71.Text = "离开";
             this.button71.UseVisualStyleBackColor = true;
+            this.button71.Click += new System.EventHandler(this.button71_Click);
             // 
             // button72
             // 
@@ -231,6 +232,7 @@
             this.button72.TabIndex = 77;
             this.button72.Text = "离开";
             this.button72.UseVisualStyleBackColor = true;
+            this.button72.Click += new System.EventHandler(this.button72_Click);
             // 
             // button73
             // 
@@ -240,6 +242,7 @@
             this.button73.TabIndex = 76;
             this.button73.Text = "离开";
             this.button73.UseVisualStyleBackColor = true;
+            this.button73.Click += new System.EventHandler(this.button73_Click);
             // 
             // button74
             // 
@@ -259,6 +262,7 @@
             this.button75.TabIndex = 74;
             this.button75.Text = "进入";
             this.button75.UseVisualStyleBackColor = false;
+            this.button75.Click += new System.EventHandler(this.button75_Click);
             // 
             // button76
             // 
@@ -268,6 +272,7 @@
             this.button76.TabIndex = 73;
             this.button76.Text = "进入";
             this.button76.UseVisualStyleBackColor = false;
+            this.button76.Click += new System.EventHandler(this.button76_Click);
             // 
             // button77
             // 
@@ -277,6 +282,7 @@
             this.button77.TabIndex = 72;
             this.button77.Text = "进入";
             this.button77.UseVisualStyleBackColor = false;
+            this.button77.Click += new System.EventHandler(this.button77_Click);
             // 
             // button78
             // 
@@ -546,6 +552,7 @@
             this.button51.TabIndex = 68;
             this.button51.Text = "离开";
             this.button51.UseVisualStyleBackColor = true;
+            this.button51.Click += new System.EventHandler(this.button51_Click);
             // 
             // button41
             // 
@@ -565,6 +572,7 @@
             this.button52.TabIndex = 67;
             this.button52.Text = "离开";
             this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
             // label25
             // 
@@ -583,6 +591,7 @@
             this.button53.TabIndex = 66;
             this.button53.Text = "离开";
             this.button53.UseVisualStyleBackColor = true;
+            this.button53.Click += new System.EventHandler(this.button53_Click);
             // 
             // button42
             // 
@@ -621,6 +630,7 @@
             this.button55.TabIndex = 64;
             this.button55.Text = "进入";
             this.button55.UseVisualStyleBackColor = false;
+            this.button55.Click += new System.EventHandler(this.button55_Click);
             // 
             // button43
             // 
@@ -640,6 +650,7 @@
             this.button56.TabIndex = 63;
             this.button56.Text = "进入";
             this.button56.UseVisualStyleBackColor = false;
+            this.button56.Click += new System.EventHandler(this.button56_Click);
             // 
             // label27
             // 
@@ -658,6 +669,7 @@
             this.button57.TabIndex = 62;
             this.button57.Text = "进入";
             this.button57.UseVisualStyleBackColor = false;
+            this.button57.Click += new System.EventHandler(this.button57_Click);
             // 
             // button44
             // 
@@ -871,6 +883,7 @@
             this.button31.TabIndex = 87;
             this.button31.Text = "离开";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button32
             // 
@@ -880,15 +893,17 @@
             this.button32.TabIndex = 86;
             this.button32.Text = "离开";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button33
             // 
             this.button33.Location = new System.Drawing.Point(363, 130);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(58, 23);
+            this.button33.Size = new System.Drawing.Size(58, 21);
             this.button33.TabIndex = 85;
             this.button33.Text = "离开";
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // button34
             // 
@@ -908,6 +923,7 @@
             this.button35.TabIndex = 83;
             this.button35.Text = "进入";
             this.button35.UseVisualStyleBackColor = false;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -917,6 +933,7 @@
             this.button36.TabIndex = 82;
             this.button36.Text = "进入";
             this.button36.UseVisualStyleBackColor = false;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // button37
             // 
@@ -1196,6 +1213,7 @@
             this.button11.TabIndex = 68;
             this.button11.Text = "离开";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -1205,6 +1223,7 @@
             this.button12.TabIndex = 67;
             this.button12.Text = "离开";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -1214,6 +1233,7 @@
             this.button13.TabIndex = 66;
             this.button13.Text = "离开";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -1253,6 +1273,7 @@
             this.button17.TabIndex = 62;
             this.button17.Text = "进入";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 

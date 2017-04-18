@@ -830,20 +830,80 @@ namespace uI
             button34.Enabled = true;
         }
 
+        //p008进入C
         private void button37_Click(object sender, EventArgs e)
         {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
 
+
+            //将当前活动填入历史轨迹中
+            Status.p008_track.time = tem;
+            Status.p008_track.area = "进入C区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008.location = "C";//该人员的当前位置
+
+            //判断C区域是否允许进入
+            if (Area.Area_C.tag == 1 || Status.p008.alarming_C_In == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法闯入C区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown3.Value = form1.numericUpDown3.Value + 1;
+            form1.Update();
+
+
+            button37.Enabled = false;
+            button33.Enabled = true;
         }
 
+        //p009进入D
         private void button16_Click(object sender, EventArgs e)
         {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
 
+
+            //将当前活动填入历史轨迹中
+            Status.p009_track.time = tem;
+            Status.p009_track.area = "进入D区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009.location = "D";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_D.tag == 1 || Status.p009.alarming_D_In == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法闯入D区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown4.Value = form1.numericUpDown4.Value + 1;
+            form1.Update();
+
+
+            button16.Enabled = false;
+            button12.Enabled = true;
         }
 
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         //p001进入B区域
         private void button50_Click(object sender, EventArgs e)
@@ -2157,6 +2217,793 @@ namespace uI
             button14.Enabled = false;
             button18.Enabled = true;
         }
+
+      
+
+        //p008进入A
+        private void button77_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p008_track.time = tem;
+            Status.p008_track.area = "进入A区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008.location = "A";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_A.tag == 1 || Status.p008.alarming_A_In == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法闯入A区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown1.Value = form1.numericUpDown1.Value + 1;
+            form1.Update();
+
+
+            button77.Enabled = false;
+            button73.Enabled = true;
+        }
+
+        //p008离开A
+        private void button73_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p008_track.area = "离开A区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008_track.time = tem;
+            Status.p008.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_A.tag2 == 1 || Status.p008.alarming_A_Out == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法离开A区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown1.Value = form1.numericUpDown1.Value - 1;
+            form1.Update();
+
+            button73.Enabled = false;
+            button77.Enabled = true;
+
+        }
+
+        //p008进入B
+        private void button57_Click(object sender, EventArgs e)
+        {
+
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p008_track.time = tem;
+            Status.p008_track.area = "进入B区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008.location = "B";//该人员的当前位置
+            //判断B区域是否允许进入
+            if (Area.Area_B.tag == 1 || Status.p008.alarming_B_In == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法闯入B区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown2.Value = form1.numericUpDown2.Value + 1;
+            form1.Update();
+
+
+            button57.Enabled = false;
+            button53.Enabled = true;
+
+        }
+        //p008离开B
+        private void button53_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p008_track.area = "离开B区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008_track.time = tem;
+            Status.p008.location = "";//该人员的当前位置
+            //判断B区域是否允许离开
+            if (Area.Area_B.tag2 == 1 || Status.p008.alarming_B_Out == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法离开B区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown2.Value = form1.numericUpDown2.Value - 1;
+            form1.Update();
+
+            button53.Enabled = false;
+            button57.Enabled = true;
+        }
+       
+        //p009进入C
+        private void button36_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p009_track.time = tem;
+            Status.p009_track.area = "进入C区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009.location = "C";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_C.tag == 1 || Status.p009.alarming_C_In == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法闯入C区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown3.Value = form1.numericUpDown3.Value + 1;
+            form1.Update();
+
+
+            button36.Enabled = false;
+            button32.Enabled = true;
+        }
+       
+        //P009离开C
+        private void button32_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p009_track.area = "离开C区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009_track.time = tem;
+            Status.p009.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_C.tag2 == 1 || Status.p009.alarming_C_Out == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法离开C区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown3.Value = form1.numericUpDown3.Value - 1;
+            form1.Update();
+
+            button32.Enabled = false;
+            button36.Enabled = true;
+        }
+
+        //p008进入D
+        private void button17_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p008_track.time = tem;
+            Status.p008_track.area = "进入D区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008.location = "D";//该人员的当前位置
+
+            //判断C区域是否允许进入
+            if (Area.Area_D.tag == 1 || Status.p008.alarming_D_In == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法闯入D区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown4.Value = form1.numericUpDown4.Value + 1;
+            form1.Update();
+
+
+            button17.Enabled = false;
+            button13.Enabled = true;
+        }
+
+        //p008离开D
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p008_track.area = "离开D区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008_track.time = tem;
+            Status.p008.location = "";//该人员的当前位置
+            //判断B区域是否允许离开
+            if (Area.Area_D.tag2 == 1 || Status.p008.alarming_D_Out == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法离开D区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown4.Value = form1.numericUpDown4.Value - 1;
+            form1.Update();
+
+            button13.Enabled = false;
+            button17.Enabled = true;
+        }
+
+        //p008离开C
+        private void button33_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p008_track.area = "离开C区域";
+            Status.p008_track.alarmingInfo = "";
+            Status.p008_track.time = tem;
+            Status.p008.location = "";//该人员的当前位置
+            //判断B区域是否允许离开
+            if (Area.Area_C.tag2 == 1 || Status.p008.alarming_C_Out == 1)
+            {
+                Status.p008_track.alarmingInfo = "非法离开B区域";
+                form1.richTextBox1.AppendText(Status.p008_track.name + " " + Status.p008_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p008_st.Push(Status.p008_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown3.Value = form1.numericUpDown3.Value - 1;
+            form1.Update();
+
+            button33.Enabled = false;
+            button37.Enabled = true;
+        }
+
+        //p009进入B
+        private void button56_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p009_track.time = tem;
+            Status.p009_track.area = "进入B区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009.location = "B";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_B.tag == 1 || Status.p009.alarming_B_In == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法闯入B区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown2.Value = form1.numericUpDown2.Value + 1;
+            form1.Update();
+
+
+            button56.Enabled = false;
+            button52.Enabled = true;
+        }
+
+        //p009离开D
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p009_track.area = "离开D区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009_track.time = tem;
+            Status.p009.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_D.tag2 == 1 || Status.p009.alarming_D_Out == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法离开D区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown4.Value = form1.numericUpDown4.Value - 1;
+            form1.Update();
+
+            button12.Enabled = false;
+            button16.Enabled = true;
+        }
+
+        //p009进入A
+        private void button76_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p009_track.time = tem;
+            Status.p009_track.area = "进入A区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009.location = "A";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_A.tag == 1 || Status.p009.alarming_A_In == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法闯入A区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown1.Value = form1.numericUpDown1.Value + 1;
+            form1.Update();
+
+
+            button76.Enabled = false;
+            button72.Enabled = true;
+        }
+        //p009离开A
+        private void button72_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p009_track.area = "离开A区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009_track.time = tem;
+            Status.p009.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_A.tag2 == 1 || Status.p009.alarming_A_Out == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法离开A区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown1.Value = form1.numericUpDown1.Value - 1;
+            form1.Update();
+
+            button72.Enabled = false;
+            button76.Enabled = true;
+
+        }
+
+        //p009离开B
+        private void button52_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p009_track.area = "离开B区域";
+            Status.p009_track.alarmingInfo = "";
+            Status.p009_track.time = tem;
+            Status.p009.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_B.tag2 == 1 || Status.p009.alarming_B_Out == 1)
+            {
+                Status.p009_track.alarmingInfo = "非法离开B区域";
+                form1.richTextBox1.AppendText(Status.p009_track.name + " " + Status.p009_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p009_st.Push(Status.p009_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown2.Value = form1.numericUpDown2.Value - 1;
+            form1.Update();
+
+            button52.Enabled = false;
+            button56.Enabled = true;
+        }
+
+        //P010进入A
+        private void button75_Click(object sender, EventArgs e)
+        {//获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p010_track.time = tem;
+            Status.p010_track.area = "进入A区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010.location = "A";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_A.tag == 1 || Status.p010.alarming_A_In == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法闯入A区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown1.Value = form1.numericUpDown1.Value + 1;
+            form1.Update();
+
+
+            button75.Enabled = false;
+            button71.Enabled = true;
+
+        }
+
+        //P010离开A
+        private void button71_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p010_track.area = "离开A区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010_track.time = tem;
+            Status.p010.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_A.tag2 == 1 || Status.p010.alarming_A_Out == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法离开A区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown1.Value = form1.numericUpDown1.Value - 1;
+            form1.Update();
+
+            button71.Enabled = false;
+            button75.Enabled = true;
+        }
+
+        //p010进入B
+        private void button55_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p010_track.time = tem;
+            Status.p010_track.area = "进入B区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010.location = "B";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_B.tag == 1 || Status.p010.alarming_B_In == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法闯入B区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown2.Value = form1.numericUpDown2.Value + 1;
+            form1.Update();
+
+
+            button55.Enabled = false;
+            button51.Enabled = true;
+        }
+
+        //p010离开B
+        private void button51_Click(object sender, EventArgs e)
+        {
+
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p010_track.area = "离开B区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010_track.time = tem;
+            Status.p010.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_B.tag2 == 1 || Status.p010.alarming_B_Out == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法离开B区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown2.Value = form1.numericUpDown2.Value - 1;
+            form1.Update();
+
+            button51.Enabled = false;
+            button55.Enabled = true;
+        }
+
+        //P010进入C
+        private void button35_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p010_track.time = tem;
+            Status.p010_track.area = "进入C区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010.location = "C";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_C.tag == 1 || Status.p010.alarming_C_In == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法闯入C区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown3.Value = form1.numericUpDown3.Value + 1;
+            form1.Update();
+
+
+            button35.Enabled = false;
+            button31.Enabled = true;
+        }
+
+        //p010离开c
+        private void button31_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p010_track.area = "离开C区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010_track.time = tem;
+            Status.p010.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_C.tag2 == 1 || Status.p010.alarming_C_Out == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法离开C区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown3.Value = form1.numericUpDown3.Value - 1;
+            form1.Update();
+
+            button31.Enabled = false;
+            button35.Enabled = true;
+        }
+
+        //p010进入D
+        private void button15_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+            //将当前活动填入历史轨迹中
+            Status.p010_track.time = tem;
+            Status.p010_track.area = "进入D区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010.location = "D";//该人员的当前位置
+            //判断A区域是否允许进入
+            if (Area.Area_D.tag == 1 || Status.p010.alarming_D_In == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法闯入D区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录该人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown4.Value = form1.numericUpDown4.Value + 1;
+            form1.Update();
+
+
+            button15.Enabled = false;
+            button11.Enabled = true;
+
+        }
+
+        //P010离开D
+        private void button11_Click(object sender, EventArgs e)
+        {
+            //获取当前时间
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now;
+            string strY = currentTime.ToString("f"); //不显示秒
+            int s = currentTime.Second;
+            String tem = strY + ":" + s;
+
+
+
+            Status.p010_track.area = "离开D区域";
+            Status.p010_track.alarmingInfo = "";
+            Status.p010_track.time = tem;
+            Status.p010.location = "";//该人员的当前位置
+            //判断D区域是否允许离开
+            if (Area.Area_D.tag2 == 1 || Status.p010.alarming_D_Out == 1)
+            {
+                Status.p010_track.alarmingInfo = "非法离开D区域";
+                form1.richTextBox1.AppendText(Status.p010_track.name + " " + Status.p010_track.alarmingInfo + " " + tem + "\r\n");
+                form1.Update();
+            }
+
+            //记录改人员的历史轨迹
+            Status.p010_st.Push(Status.p010_track);
+
+            //记录区域人员的变化
+            form1.numericUpDown4.Value = form1.numericUpDown4.Value - 1;
+            form1.Update();
+
+            button11.Enabled = false;
+            button15.Enabled = true;
+        } 
 
       
     }

@@ -35,7 +35,7 @@ namespace uI
  
       
         //0表示没有滞留时间限制，大于0则表示有滞留时间限制
-        public static int[] p001_A_time = { 0, 0, 0, 0 };
+        //public static int[] p001_A_time = { 0, 0, 0, 0 };
 
         public static Stack<Person_track> p001_st = new Stack<Person_track>();
         public static Stack<Person_track> p002_st = new Stack<Person_track>();

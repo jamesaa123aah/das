@@ -82,6 +82,8 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -102,8 +104,6 @@
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.t从 = new System.Windows.Forms.TabControl();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -143,12 +143,12 @@
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.richTextBox1);
-            this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.numericUpDown4);
             this.tabPage1.Controls.Add(this.numericUpDown3);
             this.tabPage1.Controls.Add(this.numericUpDown2);
             this.tabPage1.Controls.Add(this.numericUpDown1);
             this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
@@ -159,9 +159,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(611, 51);
+            this.button6.Location = new System.Drawing.Point(753, 15);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 23);
+            this.button6.Size = new System.Drawing.Size(78, 30);
             this.button6.TabIndex = 28;
             this.button6.Text = "启动";
             this.button6.UseVisualStyleBackColor = true;
@@ -212,7 +212,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(568, 156);
+            this.label11.Location = new System.Drawing.Point(572, 113);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 19);
             this.label11.TabIndex = 22;
@@ -220,15 +220,15 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(572, 178);
+            this.richTextBox1.Location = new System.Drawing.Point(572, 142);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(280, 247);
+            this.richTextBox1.Size = new System.Drawing.Size(280, 273);
             this.richTextBox1.TabIndex = 21;
             this.richTextBox1.Text = "";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(739, 51);
+            this.button5.Location = new System.Drawing.Point(491, 1);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 20;
@@ -664,6 +664,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "限定行为";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(69, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "分钟";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(5, 160);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(58, 26);
+            this.textBox3.TabIndex = 40;
+            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -899,22 +915,6 @@
             this.t从.Size = new System.Drawing.Size(870, 450);
             this.t从.TabIndex = 2;
             this.t从.Tag = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "分钟";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(5, 160);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(58, 26);
-            this.textBox3.TabIndex = 40;
             // 
             // Form1
             // 
